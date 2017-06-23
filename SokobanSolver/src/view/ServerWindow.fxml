@@ -21,8 +21,8 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <RadioButton layoutX="158.0" layoutY="559.0" mnemonicParsing="false" onAction="#showWaiting" text="Show waiting" />
-      <RadioButton layoutX="282.0" layoutY="559.0" mnemonicParsing="false" onAction="#showHistory" text="Show history" />
+      <RadioButton fx:id="awaitingRadioButton" layoutX="158.0" layoutY="559.0" mnemonicParsing="false" onAction="#showWaiting" text="Show waiting" />
+      <RadioButton fx:id="hanledRadioButton" layoutX="282.0" layoutY="559.0" mnemonicParsing="false" onAction="#showHistory" text="Show history" />
       <Label fx:id="hint" layoutX="195.0" layoutY="529.0" text="Click on one of the options:" />
    </children>
 </AnchorPane>

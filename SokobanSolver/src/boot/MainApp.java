@@ -16,7 +16,7 @@ public class MainApp extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		Platform.runLater(()->{
 			try {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("ServerWindow.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ServerWindow.fxml"));
 				loader.setController(new ServerWindowController());
 				Parent root = (Parent) loader.load();
 		        Stage stage = new Stage();
@@ -31,6 +31,10 @@ public class MainApp extends Application {
 	            e.printStackTrace();
 	        }
 		});
+	}
+	
+	public static void main(String[] args) {//receive user input before starting
+		launch(args);
 	}
 
 }
