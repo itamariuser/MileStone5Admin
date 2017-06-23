@@ -71,33 +71,34 @@ public class ServerWindowController extends Observable implements Observer{//Vie
 		stubAwaiting=new ArrayList<>();
 		stubHandled=new ArrayList<>();
 		
-		//TODO: ADD STUB ITEMS....
+		addTimes=new HashMap<>();
+		handledTimes=new HashMap<>();
+		
+		
+		//STUB: SIMULATE GETTING ADDRESSES FROM SERVER
 		InetAddress i1=null;
 		try {
 			i1 = InetAddress.getLocalHost();
 
 			stubAwaiting.add(i1);
 		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		awaitingList.addAll(stubAwaiting);
 		
-		addTimes=new HashMap<>();
-		handledTimes=new HashMap<>();
 		InetAddress i2=null;
 		try {
 			i2 = InetAddress.getLocalHost();
 
 			stubHandled.add(i2);
 		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		handledHistory.addAll(stubHandled);
-		
 		addTimes.put(i1, new Date());
 		handledTimes.put(i2, new Date());
+		//END OF STUB
+		
 		for (InetAddress inetAddress : awaitingList) {
 			addTimes.put(inetAddress, new Date());
 		}
